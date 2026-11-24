@@ -1,0 +1,8 @@
+# Netlify build output and local extraction
+publish/
+deploy/
+.netlify-assets/
+.netlify/
+node_modules/
+.DS_Store
+Thumbs.db
