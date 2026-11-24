@@ -1,0 +1,22 @@
+[build]
+  # Preferuje katalog źródłowy, gdy zostanie dodany do repozytorium.
+  # W obecnym repozytorium projekt jest zachowany w archiwum ZIP i jest rozpakowywany na czas buildu.
+  command = "rm -rf publish deploy && mkdir -p publish && if [ -d randkuj-normalnie-site ]; then cp -R randkuj-normalnie-site/. publish/; else mkdir -p deploy && unzip -o randkuj-normalnie-landing.zip -d deploy && cp -R deploy/randkuj-normalnie-site/. publish/; fi"
+  publish = "publish"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/previews/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
