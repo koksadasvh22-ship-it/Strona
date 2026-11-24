@@ -1,7 +1,7 @@
 [build]
   # Preferuje katalog źródłowy, gdy zostanie dodany do repozytorium.
   # W obecnym repozytorium projekt jest zachowany w archiwum ZIP i jest rozpakowywany na czas buildu.
-  command = "rm -rf publish deploy && mkdir -p publish && if [ -d randkuj-normalnie-site ]; then cp -R randkuj-normalnie-site/. publish/; else mkdir -p deploy && unzip -o randkuj-normalnie-landing.zip -d deploy && cp -R deploy/randkuj-normalnie-site/. publish/; fi"
+  command = "rm -rf publish deploy && mkdir -p publish && if [ -d randkuj-normalnie-site ]; then cp -R randkuj-normalnie-site/. publish/; else mkdir -p deploy && unzip -o randkuj-normalnie-landing.zip -d deploy && cp -R deploy/randkuj-normalnie-site/. publish/; fi && python3 scripts/enhance_site.py"
   publish = "publish"
 
 [[headers]]
