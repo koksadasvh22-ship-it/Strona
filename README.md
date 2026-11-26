@@ -16,7 +16,7 @@ W Netlify wybierz **Add new site → Import an existing project → GitHub**, ws
 
 ## Praca nad stroną w Codexie
 
-Obecnie pełny projekt jest zachowany w `randkuj-normalnie-landing.zip`. Żeby edytować pliki bezpośrednio w repozytorium:
+Źródła strony (wersja MIX: 51 stron, 12 rozdziałów, plan na 30 dni) leżą w katalogu `randkuj-normalnie-site/`, a `randkuj-normalnie-landing.zip` to starsza wersja (33 strony). Żeby edytować pliki bezpośrednio w repozytorium:
 
 1. Rozpakuj archiwum w katalogu głównym repozytorium:
    `unzip -o randkuj-normalnie-landing.zip -d .`
