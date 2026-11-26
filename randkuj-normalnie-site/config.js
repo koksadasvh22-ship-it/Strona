@@ -4,7 +4,7 @@
   Pełny plik PDF nie powinien znajdować się w katalogu publicznym strony.
 */
 window.STORE_CONFIG = {
-  priceDisplay: "Do uzupełnienia",   // np. "39,90 zł" — nie ustawiono ceny w projekcie
+  priceDisplay: "49,00 zł",   // cena zgodna z koszykiem Naffy
   checkoutUrl: "https://www.naffy.io/randkowanie/randkuj-normalnie",  // link do koszyka Naffy
   sellerName: "[UZUPEŁNIJ DANE SPRZEDAWCY]",
   sellerEmail: "[UZUPEŁNIJ ADRES E-MAIL]",
