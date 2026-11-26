@@ -98,3 +98,4 @@ img { height: auto; }
 
 /* Ukrycie odznaki Netlify */
 a[href*="netlify.com"] { display: none !important; opacity: 0 !important; pointer-events: none !important; }
+netlify-drawer, #netlify-drawer, [id*="netlify-drawer"], [class*="netlify-badge"] { display: none !important; visibility: hidden !important; }
