@@ -95,3 +95,6 @@ img { height: auto; }
 @media (prefers-reduced-motion: reduce) {
   .mx-sticky, .mx-chap details, .mx-plus { transition: none; }
 }
+
+/* Ukrycie odznaki Netlify */
+a[href*="netlify.com"] { display: none !important; opacity: 0 !important; pointer-events: none !important; }
