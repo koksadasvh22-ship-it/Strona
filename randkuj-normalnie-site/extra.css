@@ -1,0 +1,97 @@
+/* Dodatki wersji MIX: poprawki proporcji obrazów, czytelność, nowe sekcje */
+img { height: auto; }
+.hero-mockup { height: auto; }
+
+/* czytelniejsze rozmiary tekstu */
+.problem-card p, .chapter-card p, .benefit-card p { font-size: 14px; line-height: 1.6; }
+.audience-list li { font-size: 15px; }
+.check-list li { font-size: 14px; }
+.faq-answer { font-size: 15px; line-height: 1.65; }
+.hero-meta { font-size: 12.5px; }
+.workbook-items small { font-size: 13px; }
+.preview-small { font-size: 12.5px; }
+
+/* sześć kart problemu */
+.problem-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* porównanie w sekcji ścieżki */
+.mx-cmp { display: grid; grid-template-columns: 1fr 1fr; margin: 44px 0 6px; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+.mx-cmp-col { padding: 28px 30px; }
+.mx-cmp-bad { background: rgba(255,255,255,.03); }
+.mx-cmp-good { background: linear-gradient(150deg, rgba(160,110,235,.24), rgba(160,110,235,.06)); border-left: 1px solid var(--line); }
+.mx-cmp h3 { color: #fff; font-size: 19px; letter-spacing: -.02em; margin-bottom: 16px; }
+.mx-cmp ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.mx-cmp li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 14.5px; line-height: 1.55; color: #b9accd; }
+.mx-cmp-good li { color: #efe7fb; }
+.mx-cmp li b { font-size: 15px; color: var(--pink); }
+.mx-cmp-good li b { color: var(--lavender); }
+
+/* rozdziały: rozwijane karty */
+.mx-chap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: start; }
+.mx-chap details { background: #fff; border: 1px solid rgba(140,94,196,.15); border-radius: 20px; box-shadow: 0 12px 30px rgba(54,32,86,.055); transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.mx-chap details:hover { transform: translateY(-3px); box-shadow: 0 18px 38px rgba(54,32,86,.11); }
+.mx-chap details[open] { border-color: #b88cff; background: linear-gradient(180deg, #fff, #f8f2ff); }
+.mx-chap summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; padding: 18px 20px; }
+.mx-chap summary::-webkit-details-marker { display: none; }
+.mx-chap summary:focus-visible { outline: 2px solid #9567d5; outline-offset: 3px; border-radius: 20px; }
+.mx-n { font-size: 24px; font-weight: 900; letter-spacing: -.04em; color: #9567d5; min-width: 2ch; }
+.mx-t { font-size: 15px; font-weight: 800; line-height: 1.25; letter-spacing: -.02em; color: #2b1a44; }
+.mx-plus { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; color: #7b4fc4; background: rgba(149,103,213,.12); font-weight: 800; transition: transform .25s ease; }
+.mx-chap details[open] .mx-plus { transform: rotate(45deg); }
+.mx-body { padding: 0 20px 20px 58px; color: #706383; font-size: 14px; line-height: 1.6; }
+.mx-body p { margin: 0 0 10px; color: #3c2b59; font-weight: 600; }
+.mx-body ul { margin: 0; padding-left: 18px; display: grid; gap: 5px; }
+.mx-extras { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.mx-extras span { padding: 10px 16px; border-radius: 999px; background: #fff; border: 1px solid rgba(140,94,196,.18); font-size: 13px; color: #4a3a66; }
+.mx-extras b { color: #8a58d0; }
+
+/* przed i po */
+.mx-ba { display: grid; gap: 10px; max-width: 920px; margin: 0 auto; }
+.mx-ba-head, .mx-ba-row { display: grid; grid-template-columns: 1fr 36px 1fr; gap: 12px; }
+.mx-ba-head { font-size: 11px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: #a99bc4; }
+.mx-a, .mx-b { padding: 16px 20px; border-radius: 16px; font-size: 15px; line-height: 1.5; border: 1px solid; }
+.mx-a { background: rgba(250,131,120,.07); border-color: rgba(250,131,120,.28); color: #f0cbc6; }
+.mx-b { background: rgba(130,200,110,.09); border-color: rgba(130,200,110,.32); color: #e6f4dd; }
+.mx-arr { display: grid; place-items: center; color: var(--lavender); font-size: 20px; }
+
+/* czego nie znajdziesz */
+.mx-not { grid-column: 1 / -1; padding: 28px 30px; border-radius: 24px; background: #fff; border: 1px solid rgba(140,94,196,.15); box-shadow: 0 12px 30px rgba(54,32,86,.055); }
+.mx-not h3 { font-size: 19px; letter-spacing: -.03em; color: #2b1a44; margin-bottom: 16px; }
+.mx-not ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
+.mx-not li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 14.5px; color: #655779; line-height: 1.55; }
+.mx-not li b { color: #d3584f; }
+
+.mx-todo { display: inline-block; padding: 1px 8px; border: 1px dashed #f08a7c; border-radius: 6px; color: #ffd4cc; background: rgba(240,138,124,.1); font-size: .92em; }
+
+/* przyklejony pasek zakupu (telefon) */
+.mx-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(16,11,37,.95); backdrop-filter: blur(14px); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform .35s ease; }
+.mx-sticky.show { transform: none; }
+.mx-sticky strong { display: block; color: #fff; font-size: 13px; }
+.mx-sticky small { color: #b9accd; font-size: 11px; }
+
+@media (max-width: 1000px) {
+  .problem-grid { grid-template-columns: repeat(2, 1fr); }
+  .mx-chap { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .mx-sticky { display: flex; }
+  .site-footer { padding-bottom: 90px; }
+  .hero-mockup { width: min(96%, 480px); }
+  .hero-visual { min-height: 0; margin: 0; }
+  .problem-card p, .chapter-card p, .benefit-card p { font-size: 13.5px; }
+  .audience-list li { font-size: 14px; }
+  .hero-meta { font-size: 11.5px; }
+  .faq-answer { font-size: 14px; }
+  .mx-cmp { grid-template-columns: 1fr; }
+  .mx-cmp-good { border-left: 0; border-top: 1px solid var(--line); }
+  .mx-chap { grid-template-columns: 1fr; }
+  .mx-body { padding-left: 20px; }
+  .mx-ba-head { display: none; }
+  .mx-ba-row { grid-template-columns: 1fr; gap: 6px; }
+  .mx-arr { transform: rotate(90deg); height: 18px; }
+  .mx-not ul { grid-template-columns: 1fr; }
+  .problem-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mx-sticky, .mx-chap details, .mx-plus { transition: none; }
+}
